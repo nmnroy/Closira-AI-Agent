@@ -1,0 +1,10 @@
+{
+  "customer_intent": "The customer was trying to find out if the clinic offers laser hair removal services. They needed information on a specific service offered by the clinic.",
+  "key_details": {},
+  "sop_gaps": [
+    "do you offer laser hair removal?"
+  ],
+  "escalated": true,
+  "escalation_reason": "out_of_scope",
+  "recommended_next_action": "The human team should follow up with the customer to provide information on laser hair removal services offered by the clinic."
+}

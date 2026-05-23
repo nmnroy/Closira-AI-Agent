@@ -1,0 +1,10 @@
+{
+  "customer_intent": "The customer was inquiring about the possibility of getting a discount on dermal fillers at the Bloom Aesthetics Clinic. They were seeking a price reduction on the service.",
+  "key_details": {
+    "treatment_interest": "Dermal Fillers"
+  },
+  "sop_gaps": [],
+  "escalated": true,
+  "escalation_reason": "pricing_negotiation",
+  "recommended_next_action": "The human team should contact the customer to discuss pricing and potential options for dermal fillers."
+}

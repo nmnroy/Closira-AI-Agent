@@ -1,0 +1,8 @@
+{
+  "customer_intent": "The customer has not yet stated their intent, as the conversation has just begun.",
+  "key_details": {},
+  "sop_gaps": [],
+  "escalated": false,
+  "escalation_reason": null,
+  "recommended_next_action": "The human team should wait for the customer to provide more information about their needs."
+}

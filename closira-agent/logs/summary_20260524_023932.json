@@ -1,0 +1,13 @@
+{
+  "customer_intent": "The customer was trying to learn more about the services offered by Bloom Aesthetics Clinic, specifically Dermal Fillers, and book a consultation. They were interested in getting lip fillers and wanted to know more about the treatment options and process.",
+  "key_details": {
+    "name": "First Time",
+    "service_interest": "Dermal Fillers",
+    "experience_level": "first_time",
+    "urgency": "within 2 weeks"
+  },
+  "sop_gaps": [],
+  "escalated": false,
+  "escalation_reason": null,
+  "recommended_next_action": "The human team should follow up with the customer to provide more information about the free consultation and answer any remaining questions they may have."
+}

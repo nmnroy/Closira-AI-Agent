@@ -1,0 +1,13 @@
+{
+  "customer_intent": "The customer was trying to express their dissatisfaction with their last visit to the clinic and seek resolution. They wanted to report their unhappy experience and get help from the team.",
+  "key_details": {
+    "client_name": "not provided",
+    "reason_for_contact": "unhappy with last visit",
+    "urgency": "high",
+    "service_interest": "resolution of complaint"
+  },
+  "sop_gaps": [],
+  "escalated": true,
+  "escalation_reason": "complaint",
+  "recommended_next_action": "The human team should promptly contact the customer to apologize, investigate the issue, and provide a suitable resolution to their complaint."
+}

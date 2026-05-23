@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="closira-agent/assets/demo.png" alt="Closira AI Agent Demo" width="100%" />
+  <a href="https://drive.google.com/file/d/1WImazpWiUVcaEABYs1NDLoBlV_K5v1Mq/view?usp=sharing">
+    <img src="closira-agent/assets/demo.png" alt="Closira AI Agent Demo" width="100%" />
+  </a>
   
   # 🌸 Closira AI Agent — Bloom Aesthetics Clinic
   **An intelligent, SOP-grounded customer support workflow.**

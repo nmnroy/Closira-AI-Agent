@@ -1,0 +1,13 @@
+{
+  "customer_intent": "The customer was trying to learn more about the Dermal Fillers service, specifically lip fillers, and book a consultation. They were interested in understanding the process and what to expect from the treatment.",
+  "key_details": {
+    "name": "First tim",
+    "service_interest": "Dermal Fillers",
+    "experience_level": "first_time",
+    "urgency": "within 2 weeks"
+  },
+  "sop_gaps": [],
+  "escalated": false,
+  "escalation_reason": null,
+  "recommended_next_action": "The human team should contact the customer to provide more information about the free consultation and answer any remaining questions they may have."
+}

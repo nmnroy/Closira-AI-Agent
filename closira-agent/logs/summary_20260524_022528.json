@@ -1,0 +1,8 @@
+{
+  "customer_intent": "The customer was trying to speak with a human representative, explicitly requesting to be handed over to a team member.",
+  "key_details": {},
+  "sop_gaps": [],
+  "escalated": true,
+  "escalation_reason": "explicit_request",
+  "recommended_next_action": "The human team should engage with the customer immediately to address their concerns or questions."
+}

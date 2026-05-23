@@ -1,0 +1,10 @@
+{
+  "customer_intent": "The customer was inquiring about the services offered by Bloom Aesthetics Clinic, specifically Botox, and was looking to book an appointment. They sought information on pricing, opening hours, and the booking process.",
+  "key_details": {
+    "treatment_interest": "Botox"
+  },
+  "sop_gaps": [],
+  "escalated": false,
+  "escalation_reason": null,
+  "recommended_next_action": "The human team should follow up with the customer to confirm their appointment booking and provide any additional information they may need."
+}

@@ -1,0 +1,12 @@
+{
+  "customer_intent": "The customer was trying to inquire about the cost of Botox and book an appointment, and also asked about hair removal services.",
+  "key_details": {
+    "treatment_interest": "Botox"
+  },
+  "sop_gaps": [
+    "do you offer hair removal?"
+  ],
+  "escalated": true,
+  "escalation_reason": "out_of_scope",
+  "recommended_next_action": "The human team should follow up with the customer to provide information about hair removal services and assist with booking a consultation for Botox treatment."
+}

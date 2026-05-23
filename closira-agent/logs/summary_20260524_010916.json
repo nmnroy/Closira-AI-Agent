@@ -1,0 +1,12 @@
+{
+  "customer_intent": "The customer was trying to inquire about the cost of Botox and learn more about the services offered by Bloom Aesthetics Clinic. They also asked about laser hair removal, which was outside the scope of the AI's knowledge.",
+  "key_details": {
+    "treatment_interest": "Botox"
+  },
+  "sop_gaps": [
+    "do you offer lazer hair removal?"
+  ],
+  "escalated": false,
+  "escalation_reason": null,
+  "recommended_next_action": "The human team should follow up with the customer to provide more information about their services and answer any remaining questions they may have."
+}
