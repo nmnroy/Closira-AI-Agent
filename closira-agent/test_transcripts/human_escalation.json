@@ -1,0 +1,21 @@
+{
+  "name": "Scenario B - Immediate Human Escalation",
+  "turns": [
+    {
+      "user": "Hi, what is your cancellation policy?",
+      "expected_stage": "FAQ"
+    },
+    {
+      "user": "I want to speak with a clinic manager immediately. Please connect me to a human.",
+      "expected_stage": "ESCALATION"
+    },
+    {
+      "user": "Yes, please log the request. Contact me at john@example.com.",
+      "expected_stage": "ESCALATION"
+    },
+    {
+      "user": "Goodbye",
+      "expected_stage": "SUMMARY"
+    }
+  ]
+}

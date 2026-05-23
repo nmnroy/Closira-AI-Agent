@@ -1,0 +1,10 @@
+{
+  "customer_intent": "The customer was trying to inquire about the cost of treatment and book an appointment at Bloom Aesthetics Clinic.",
+  "key_details": {},
+  "sop_gaps": [
+    "could you share the location"
+  ],
+  "escalated": true,
+  "escalation_reason": "out_of_scope",
+  "recommended_next_action": "The human team should follow up with the customer to provide the clinic's location and assist with booking an appointment."
+}

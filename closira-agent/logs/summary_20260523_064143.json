@@ -1,0 +1,13 @@
+{
+  "customer_intent": "The customer initially inquired about services and pricing, then expressed a clear intent to book a Botox session and provided their name, email, and preferred appointment time.",
+  "key_details": {
+    "treatment_interest": "Botox",
+    "client_name": "Sarah Connor",
+    "contact_email": "sarah@connor.com",
+    "preferred_time": "Saturday at 11am"
+  },
+  "sop_gaps": [],
+  "escalated": false,
+  "escalation_reason": null,
+  "recommended_next_action": "The human team should contact Sarah Connor to confirm and finalize her Botox booking for Saturday at 11am."
+}

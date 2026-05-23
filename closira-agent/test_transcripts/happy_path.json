@@ -1,0 +1,43 @@
+{
+  "name": "Scenario A - Full qualification and booking request",
+  "turns": [
+    {
+      "user": "Hi, what services do you offer and when are you open?",
+      "expected_stage": "FAQ"
+    },
+    {
+      "user": "How much is Botox? And what about lip fillers?",
+      "expected_stage": "FAQ"
+    },
+    {
+      "user": "I would like to book a Botox session, please.",
+      "expected_stage": "QUALIFICATION",
+      "expected_extraction": {
+        "treatment_interest": "Botox"
+      }
+    },
+    {
+      "user": "My name is Sarah Connor",
+      "expected_stage": "QUALIFICATION",
+      "expected_extraction": {
+        "client_name": "Sarah Connor"
+      }
+    },
+    {
+      "user": "My email is sarah@connor.com and Saturday at 11am would be great.",
+      "expected_stage": "ESCALATION",
+      "expected_extraction": {
+        "contact_email": "sarah@connor.com",
+        "preferred_time": "Saturday at 11am"
+      }
+    },
+    {
+      "user": "Yes, please log the booking request.",
+      "expected_stage": "ESCALATION"
+    },
+    {
+      "user": "No, that is all. Thank you!",
+      "expected_stage": "SUMMARY"
+    }
+  ]
+}
