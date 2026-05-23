@@ -1,47 +1,113 @@
-# Closira AI Agent — Bloom Aesthetics Clinic
+<div align="center">
+  <img src="assets/demo.png" alt="Closira AI Agent Demo" width="100%" />
+  
+  # 🌸 Closira AI Agent — Bloom Aesthetics Clinic
+  **An intelligent, SOP-grounded customer support workflow.**
+  
+  [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
+  [![Powered by Groq](https://img.shields.io/badge/Powered%20by-Groq%20%7C%20LLaMA%203.3-f55036.svg)](https://groq.com/)
+  [![Interface](https://img.shields.io/badge/Interface-CLI-2ea44f.svg)](#)
+</div>
 
-An AI-powered customer support workflow built with Python and Google Gemini Flash.
+---
 
-## Setup
+## ✨ What This Does
 
-1. **Clone the repo and install dependencies:**
+The **Closira AI Agent** simulates a complete customer support session for a fictional aesthetics clinic. It intelligently handles inbound enquiries across four structured stages:
+
+- **🛡️ Strict SOP Adherence:** Answers questions **only** from a defined SOP (Zero hallucination).
+- **🎯 Lead Qualification:** Qualifies leads by asking 3 structured questions naturally.
+- **🚨 Smart Escalation Detection:** Detects triggers (complaints, medical questions, out-of-scope queries) and smoothly hands off to a human agent, logging the reason.
+- **📝 Automated Summarisation:** Generates a structured JSON session summary at the end of every conversation.
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/nmnroy/Closira-AI-Agent.git
+cd Closira-AI-Agent/closira-agent
+```
+
+### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-2. **Add your API key:**
+### 3. Configure your Environment
 ```bash
 cp .env.example .env
-# Edit .env and add your GOOGLE_API_KEY
 ```
+Edit `.env` and add your **Groq API Key**:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+> **Get a free Groq API key here:** [console.groq.com/keys](https://console.groq.com/keys)
 
-3. **Run the CLI:**
+### 4. Run the agent
 ```bash
-python main.py
+python3 main.py
 ```
 
-## Commands (in-session)
+---
+
+## 🎮 In-Session Commands
+
 | Command | Action |
 |---------|--------|
-| `/qualify` | Start lead qualification flow |
-| `/summary` | Generate session summary |
-| `/quit` | End session (auto-generates summary) |
-| `/help` | Show commands |
+| `/qualify` | Switch to lead qualification mode (asks 3 structured questions) |
+| `/summary` | Generate and display structured session summary |
+| `/quit` | End session and auto-generate summary |
+| `/help` | Show available commands |
 
-## Architecture
-- **Stage 1 — FAQ:** `stages/faq.py` — answers from SOP only, detects escalation flags
-- **Stage 2 — Qualification:** `stages/qualification.py` — structured 3-question flow
-- **Stage 3 — Escalation:** `stages/escalation.py` — deterministic handler + logger
-- **Stage 4 — Summary:** `stages/summary.py` — structured JSON summary via low-temp call
+---
 
-## SOP
-Edit `sop.json` to change business info, services, or escalation triggers.
+## 🧠 How It Works: The Four Stages
 
-## Logs
-All escalations and summaries are saved to `logs/` as timestamped JSON files.
+### 1️⃣ FAQ Answering (`stages/faq.py`)
+Answers customer questions strictly from `sop.json`. If a question falls outside the SOP, the model embeds an escalation flag `{"escalate": true, "reason": "out_of_scope"}`. The parser strips this from the visible reply and routes the session to escalation.
 
-## Trade-offs & Limitations
-- No persistent storage — session history lives in RAM only
-- Qualification is linear (3 fixed questions); no branching logic
-- Summary relies on Gemini output being valid JSON (regex fallback included)
-- No frontend — CLI only, as per assignment spec
+### 2️⃣ Lead Qualification (`stages/qualification.py`)
+Triggered by `/qualify` or when a customer expresses interest. Asks:
+1. *Which service are you interested in?*
+2. *Are you a first time or returning customer?*
+3. *How soon are you looking to book?*
+
+### 3️⃣ Escalation Detection (`stages/escalation.py`)
+Detects escalations via AI-driven sentiment analysis or rule-based limits (e.g. 2+ unanswered questions). Triggers on: `complaint`, `medical_question`, `pricing_negotiation`, `out_of_scope`, or `explicit_request`. Escalations are beautifully logged to `logs/`.
+
+### 4️⃣ Conversation Summary (`stages/summary.py`)
+Generated on `/quit` or `/summary`. Outputs a clean JSON payload mapping out `customer_intent`, `key_details`, `sop_gaps`, and `recommended_next_action`.
+
+---
+
+## 📂 Project Structure
+
+```text
+closira-agent/
+├── main.py                # CLI entry point and session orchestrator
+├── agent.py               # AI caller (using Groq's OpenAI-compatible endpoint)
+├── sop.json               # SOP data — the only source of truth
+├── .env                   # Environment variables (Groq Key)
+├── stages/                # The 4 workflow stages (faq, qualification, escalation, summary)
+├── utils/                 # Logging utilities
+├── logs/                  # Auto-generated JSON logs for summaries and escalations
+├── test_transcripts/      # Test scenarios demonstrating agent behavior
+└── prompt_design.md       # Comprehensive breakdown of prompt engineering & design
+```
+
+---
+
+## ⚡ Under the Hood
+
+- **LLM Engine:** Powered by `llama-3.3-70b-versatile` running via [Groq](https://groq.com/) for lightning-fast inference using the OpenAI SDK.
+- **Stateless Design:** Session history lives in RAM for a fast, simple CLI demo.
+- **Adaptability:** Swap `sop.json` to adapt the agent for *any* business instantly—no code changes required!
+
+---
+
+<div align="center">
+Built by <b>Naman Roy</b> for the Closira AI Engineering Intern Assignment.<br>
+<a href="https://github.com/nmnroy">@nmnroy</a>
+</div>
