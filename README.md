@@ -9,6 +9,11 @@
   [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![Powered by Groq](https://img.shields.io/badge/Powered%20by-Groq%20%7C%20LLaMA%203.3-f55036.svg)](https://groq.com/)
   [![Interface](https://img.shields.io/badge/Interface-CLI-2ea44f.svg)](#)
+  
+  <br>
+  <a href="https://drive.google.com/file/d/1WImazpWiUVcaEABYs1NDLoBlV_K5v1Mq/view?usp=sharing">
+    <img src="https://img.shields.io/badge/🎥_Watch_Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo Video" />
+  </a>
 </div>
 
 ---
